@@ -6,7 +6,7 @@ import java.util.List;
 @Data
 public class ListKarts {
     private List data;
-
+//`
     @Override
     public String toString() {
         return "Картотека{" +

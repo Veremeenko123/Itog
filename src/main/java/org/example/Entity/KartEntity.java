@@ -7,7 +7,7 @@ public class KartEntity {
     private String num;
     private ChelEntity chel;
     private DelEntity del;
-
+//`
     @Override
     public String toString() {
         return "Картотека{" +

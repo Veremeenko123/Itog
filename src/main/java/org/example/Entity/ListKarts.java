@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 @Data
 public class ListKarts {
-    private List data;
+    private List<KartEntity> data;
 //`
     @Override
     public String toString() {

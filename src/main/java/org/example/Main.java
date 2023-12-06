@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-
+//Веремеенко
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
@@ -38,6 +38,7 @@ public class Main {
                 System.out.println("1 - добавить человека");
                 System.out.println("2 - вывести");
                 System.out.println("3 - поиск по интерполу");
+                System.out.println("4 - удалить");
                 System.out.println("5 - записать данные в файл");
                 System.out.println("6 - завершить работу программы");
                 menu = scanner.nextInt();
@@ -81,27 +82,27 @@ public class Main {
                         }break;
                     case 2: karts.getData().forEach(System.out::println);break;
                     case 3:
-                        /*System.out.println("Введите фамилию преступника, которого хотите найти:");
+                        System.out.println("Введите номер дела, которого хотите найти:");
                         scanner.nextLine();
                         String textSearch = scanner.nextLine();
                         List <ChelEntity> searchResult = new ArrayList<>();
-                        for (ChelEntity b: karts.getData()) {
-                            if (b.getSurname().equals(textSearch)) {
-                                searchResult.add(b);
+                        for (KartEntity b: karts.getData()) {
+                            if (b.getNum().equals(textSearch)) {
+                                searchResult.add(b.getChel());
                             }
                             if (searchResult.isEmpty()) {
                                 System.out.println("Преступник не найден");
                             }else {
                                 searchResult.forEach(System.out::println);
                             }
-                        }*/break;
+                        }break;
                     case 4:
-                       /* System.out.println("Введите фамилию преступника, которого хотите удалить");
+                        System.out.println("Введите номер дела, которого хотите удалить");
                         scanner.nextLine();
                         String deleteChel = scanner.nextLine();
                         List deleteResult = new ArrayList<>();
-                        for (ChelEntity b : karts.getData()) {
-                            if (b.getSurname().equalsIgnoreCase(deleteChel)) {
+                        for (KartEntity b : karts.getData()) {
+                            if (b.getNum().equalsIgnoreCase(deleteChel)) {
                                 deleteResult.add(b);
                             }
                         }
@@ -109,7 +110,7 @@ public class Main {
                             System.out.println("Преступник не найден");
                         }else {
                             for (Object b : deleteResult) {
-                                System.out.println("Удалить преступника?" + "Да" + "Нет\n" + b);
+                                System.out.println("Удалить преступника?" + " Да " + " Нет\n" + b);
                                 String d = scanner.nextLine();
                                 if (d.equalsIgnoreCase("Да")) {
                                     karts.getData().remove(b);
@@ -118,7 +119,7 @@ public class Main {
                                     System.out.println("Отмена удаления");
                                 }
                             }
-                        }*/break;
+                        }break;
                     case 5: Gson gson = new Gson();
                     String str = gson.toJson(karts);
                     try(FileWriter fileWriter = new FileWriter(file)) {

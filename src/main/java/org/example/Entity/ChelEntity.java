@@ -7,7 +7,7 @@ public class ChelEntity {
     private String name;
     private String surname;
     private String klichka;
-
+//`
     @Override
     public String toString() {
         return "Преступник{" +

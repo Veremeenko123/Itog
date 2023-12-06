@@ -11,7 +11,7 @@ public class DelEntity {
     private String datar;
     private String prof;
     private String delo;
-
+//`
     @Override
     public String toString() {
         return "Дело{" +
